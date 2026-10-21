@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "../features/ride-planning/ride-planning.css";
+@import "../shared/step-header.css";
+@import "../features/welcome/welcome.css";
+@import "../features/shapes/shapes.css";
+@import "../features/location-search/location-search.css";
+@import "../features/ride-map/ride-map.css";
+@import "../features/route-results/route-results.css";
+
+:root {
+  color-scheme: light;
+  --paper: #edeae4;
+  --panel: #f8f6f1;
+  --ink: #211f1c;
+  --muted: #89847c;
+  --coral: #df694f;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+  --mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 4px;
+}
+
+.loading-screen {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  body {
+    overflow: auto;
+  }
+}

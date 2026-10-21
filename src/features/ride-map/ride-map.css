@@ -1,0 +1,35 @@
+.map-preview {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #e5e4dd;
+}
+
+.map-preview .leaflet-tile {
+  filter: saturate(0.48) contrast(0.9) brightness(1.04);
+}
+
+.map-preview .leaflet-control-attribution {
+  margin: 0 10px 8px 0;
+  padding: 3px 6px;
+  border-radius: 3px;
+  background: rgba(248, 246, 241, 0.86);
+  color: #514d46;
+  font: 9px var(--sans);
+}
+
+.map-preview .leaflet-control-attribution a {
+  color: inherit;
+}
+
+@media (max-width: 760px) {
+  .map-preview {
+    visibility: hidden;
+  }
+
+  .landing.distance-open .map-preview,
+  .landing.route-open .map-preview {
+    visibility: visible;
+    inset: 0;
+  }
+}

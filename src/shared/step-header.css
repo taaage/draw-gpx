@@ -1,0 +1,47 @@
+.step-header {
+  display: flex;
+  align-items: center;
+}
+
+.step-header {
+  justify-content: space-between;
+  min-height: 28px;
+}
+
+.back-button {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.step-progress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-progress i {
+  display: block;
+  width: 21px;
+  height: 2px;
+  border-radius: 2px;
+  background: #ddd9d1;
+}
+
+.step-progress i.current {
+  background: var(--ink);
+}
+
+.step-spacer {
+  width: 30px;
+}
+
+@media (max-width: 760px) {
+  .distance-step .step-header {
+    min-height: 30px;
+  }
+}
